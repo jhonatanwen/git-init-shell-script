@@ -9,7 +9,7 @@ read repo_name
 git init
 
 # Adicione e faça o commit do arquivo README.md
-git add README.md
+git add .
 git commit -m "Primeiro commit: arquivo README.md"
 
 # Adicione o repositório remoto e envie o commit inicial
