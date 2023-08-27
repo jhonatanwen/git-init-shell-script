@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script para automatizar a criação de um repositório Git
+# Gets the github important url credentials
 
 echo "Insert your github nickname:"
 read github_nickname
@@ -8,16 +8,16 @@ read github_nickname
 echo "Insert the repository name(url):"
 read repo_name
 
-# Inicialize um repositório Git
+# Initialize the git repository
 git init
 
-# Adicione e faça o commit do arquivo README.md
+# Adds everything in the repository and makes the first commit
 git add .
-git commit -m "Primeiro commit: arquivo README.md"
+git commit -m "First commit"
 
-# Adicione o repositório remoto e envie o commit inicial
+# Adds the remote repository and make the first push in main branch
 git remote add origin https://github.com/$github_nickname/$repo_name.git
 git branch -M main
 git push -u origin main
 
-echo "Repositório $repo_name criado e configurado!"
+echo "$repo_name repo created and configured!"
