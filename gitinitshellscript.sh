@@ -2,6 +2,9 @@
 
 # Script para automatizar a criação de um repositório Git
 
+echo "Insert your github nickname:"
+read github_nickname
+
 echo "Insert the repository name(url):"
 read repo_name
 
@@ -13,7 +16,7 @@ git add .
 git commit -m "Primeiro commit: arquivo README.md"
 
 # Adicione o repositório remoto e envie o commit inicial
-git remote add origin https://github.com/jhonatanwen/$repo_name.git
+git remote add origin https://github.com/$github_nickname/$repo_name.git
 git branch -M main
 git push -u origin main
 
